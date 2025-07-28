@@ -61,7 +61,7 @@ function HomeComponent() {
       >
         <Link
           className="flex mb-1.5 w-full break-inside-avoid  flex-col p-4 bg-muted/80"
-          to="/experiments/02-layout"
+          to="/experiments/03-layout"
         >
           <img
             src="/03.png"
