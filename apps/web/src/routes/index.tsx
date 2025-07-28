@@ -55,90 +55,77 @@ function HomeComponent() {
           Experiments
         </Title>
       </section>
-      <DraggableScrollContainer
-        style={{
-          scrollPaddingLeft: padding + "px",
-          scrollPaddingRight: padding + "px",
-        }}
-        className="no-scrollbar mt-3.5 snap-x snap-mandatory"
+      <Section
+        className="columns-1 gap-1.5 px-1.5 md:columns-2 lg:columns-3 xl:columns-4"
+        side="b"
       >
-        <div
-          style={{
-            marginLeft: padding + "px",
-            marginRight: padding + "px",
-          }}
-          className="no-scrollbar flex w-max items-start gap-6"
+        <Link
+          className="flex mb-1.5 w-full break-inside-avoid  flex-col p-4 bg-muted/80"
+          to="/experiments/02-layout"
         >
-          <Link
-            className="flex w-[33vw] flex-col p-4 bg-muted/80"
-            to="/experiments/02-layout"
-          >
-            <img
-              src="/03.png"
-              alt="experiment"
-              className="w-full h-full object-cover"
-            />
-            <div className="flex pt-2.5 flex-col gap-2">
-              <Title style={{ margin: 0 }} level={3} showAs={6}>
-                Drak Mode Grid Layout
-              </Title>
-              <div className="flex items-center gap-2">
-                <a
-                  className="text-xs underline"
-                  href="https://x.com/GotinGeorgiG"
-                >
-                  @GotinGeorgiG
-                </a>
-              </div>
+          <img
+            src="/03.png"
+            alt="experiment"
+            className="w-full h-full object-cover"
+          />
+          <div className="flex pt-2.5 flex-col gap-2">
+            <Title style={{ margin: 0 }} level={3} showAs={6}>
+              Drak Mode Grid Layout
+            </Title>
+            <div className="flex items-center gap-2">
+              <a
+                className="text-xs underline"
+                href="https://x.com/GotinGeorgiG"
+              >
+                @GotinGeorgiG
+              </a>
             </div>
-          </Link>
-          <Link
-            className="flex w-[33vw] flex-col p-4 bg-muted/80"
-            to="/experiments/02-layout"
-          >
-            <img
-              src="/02.png"
-              alt="experiment"
-              className="w-full h-full object-cover"
-            />
-            <div className="flex pt-2.5 flex-col gap-2">
-              <Title style={{ margin: 0 }} level={3} showAs={6}>
-                Dashed Grid
-              </Title>
-              <div className="flex items-center gap-2">
-                <a className="text-xs underline" href="https://x.com/01_hh_">
-                  @01_hh_
-                </a>
-              </div>
+          </div>
+        </Link>
+        <Link
+          className="flex mb-1.5 w-full break-inside-avoid  flex-col p-4 bg-muted/80"
+          to="/experiments/02-layout"
+        >
+          <img
+            src="/02.png"
+            alt="experiment"
+            className="w-full h-full object-cover"
+          />
+          <div className="flex pt-2.5 flex-col gap-2">
+            <Title style={{ margin: 0 }} level={3} showAs={6}>
+              Dashed Grid
+            </Title>
+            <div className="flex items-center gap-2">
+              <a className="text-xs underline" href="https://x.com/01_hh_">
+                @01_hh_
+              </a>
             </div>
-          </Link>
-          <Link
-            className="flex w-[33vw] flex-col p-4 bg-muted/80"
-            to="/experiments/01-layout"
-          >
-            <img
-              src="/01.jpeg"
-              alt="experiment"
-              className="w-full h-full object-cover"
-            />
-            <div className="flex pt-2.5 flex-col gap-2">
-              <Title style={{ margin: 0 }} level={3} showAs={6}>
-                Brutalist Layout
-              </Title>
-              <div className="flex items-center gap-2">
-                <a
-                  className="text-xs underline"
-                  href="https://x.com/Marki_Tweet/status/1947246017071480915/photo/1"
-                >
-                  @Marki_Tweet
-                </a>
-              </div>
+          </div>
+        </Link>
+        <Link
+          className="flex mb-1.5 w-full break-inside-avoid  flex-col p-4 bg-muted/80"
+          to="/experiments/01-layout"
+        >
+          <img
+            src="/01.jpeg"
+            alt="experiment"
+            className="w-full h-full object-cover"
+          />
+          <div className="flex pt-2.5 flex-col gap-2">
+            <Title style={{ margin: 0 }} level={3} showAs={6}>
+              Brutalist Layout
+            </Title>
+            <div className="flex items-center gap-2">
+              <a
+                className="text-xs underline"
+                href="https://x.com/Marki_Tweet/status/1947246017071480915/photo/1"
+              >
+                @Marki_Tweet
+              </a>
             </div>
-          </Link>
-        </div>
-      </DraggableScrollContainer>
-
-      <Section className="opacity-0">x</Section>
+          </div>
+        </Link>
+      </Section>
     </div>
   )
 }
