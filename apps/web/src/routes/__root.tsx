@@ -1,19 +1,14 @@
 import { Toaster } from "@/components/ui/sonner"
 
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
-
+import type { QueryClient } from "@tanstack/react-query"
 import {
   HeadContent,
   Outlet,
   Scripts,
   createRootRouteWithContext,
-  useRouterState,
 } from "@tanstack/react-router"
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
-import Header from "../components/header"
+import { Analytics } from "@vercel/analytics/react"
 import appCss from "../index.css?url"
-import type { QueryClient } from "@tanstack/react-query"
-import Loader from "@/components/loader"
 
 import type { TRPCOptionsProxy } from "@trpc/tanstack-react-query"
 import type { AppRouter } from "../../../server/src/routers"
@@ -54,6 +49,7 @@ function RootDocument() {
         <HeadContent />
       </head>
       <body>
+        <Analytics />
         <Outlet />
         <Toaster richColors />
         {/* <TanStackRouterDevtools position="bottom-left" /> */}
