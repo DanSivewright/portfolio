@@ -1,8 +1,5 @@
-import { Button } from "@/components/ui/button"
 import { Grid } from "@/components/ui/grid"
-import { Title } from "@/components/ui/title"
 import { createFileRoute } from "@tanstack/react-router"
-import { ArrowRight } from "lucide-react"
 
 export const Route = createFileRoute("/experiments/03-layout")({
   component: RouteComponent,
