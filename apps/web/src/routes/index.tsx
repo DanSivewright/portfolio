@@ -1,14 +1,13 @@
-import DraggableScrollContainer from "@/components/draggable-scroll-container"
 import { Section } from "@/components/section"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Title } from "@/components/ui/title"
-import { useViewportSize } from "@/hooks/use-viewport-size"
 import { createFileRoute, Link } from "@tanstack/react-router"
 
 // Import images as modules
 import experiment01Image from "/01.jpeg"
 import experiment02Image from "/02.png"
 import experiment03Image from "/03.png"
+import experiment04Image from "/04.png"
 import profileImage from "/me.jpeg"
 
 export const Route = createFileRoute("/")({
@@ -16,10 +15,6 @@ export const Route = createFileRoute("/")({
 })
 
 function HomeComponent() {
-  const viewportSize = useViewportSize()
-  const padding =
-    // viewportSize.width < 1328 ? 24 : (viewportSize.width - 1232) / 2
-    viewportSize.width < 672 ? 24 : (viewportSize.width - 648) / 2
   return (
     <div className="flex flex-col gap-0">
       <Section
@@ -65,6 +60,29 @@ function HomeComponent() {
         className="columns-1 gap-1.5 px-1.5 md:columns-2 lg:columns-3 xl:columns-4"
         side="b"
       >
+        <Link
+          className="flex mb-1.5 w-full break-inside-avoid  flex-col p-4 bg-muted/80"
+          to="/experiments/04-layout"
+        >
+          <img
+            src={experiment04Image}
+            alt="experiment"
+            className="w-full h-full object-cover"
+          />
+          <div className="flex pt-2.5 flex-col gap-2">
+            <Title style={{ margin: 0 }} level={3} showAs={6}>
+              Bento Grid
+            </Title>
+            <div className="flex items-center gap-2">
+              <a
+                className="text-xs underline"
+                href="https://x.com/basit_designs"
+              >
+                @basit_designs
+              </a>
+            </div>
+          </div>
+        </Link>
         <Link
           className="flex mb-1.5 w-full break-inside-avoid  flex-col p-4 bg-muted/80"
           to="/experiments/03-layout"
