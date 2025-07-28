@@ -5,6 +5,12 @@ import { Title } from "@/components/ui/title"
 import { useViewportSize } from "@/hooks/use-viewport-size"
 import { createFileRoute, Link } from "@tanstack/react-router"
 
+// Import images as modules
+import experiment01Image from "/01.jpeg"
+import experiment02Image from "/02.png"
+import experiment03Image from "/03.png"
+import profileImage from "/me.jpeg"
+
 export const Route = createFileRoute("/")({
   component: HomeComponent,
 })
@@ -23,7 +29,7 @@ function HomeComponent() {
         <Title showAs={3} level={1} className="text-muted-foreground/70">
           <span className="text-primary">
             <Avatar className="inline-flex size-6 mr-2">
-              <AvatarImage className="object-cover" src="/me.jpeg" />
+              <AvatarImage className="object-cover" src={profileImage} />
               <AvatarFallback>DS</AvatarFallback>
             </Avatar>
             I'm Dan.
@@ -64,7 +70,7 @@ function HomeComponent() {
           to="/experiments/03-layout"
         >
           <img
-            src="/03.png"
+            src={experiment03Image}
             alt="experiment"
             className="w-full h-full object-cover"
           />
@@ -87,7 +93,7 @@ function HomeComponent() {
           to="/experiments/02-layout"
         >
           <img
-            src="/02.png"
+            src={experiment02Image}
             alt="experiment"
             className="w-full h-full object-cover"
           />
@@ -107,7 +113,7 @@ function HomeComponent() {
           to="/experiments/01-layout"
         >
           <img
-            src="/01.jpeg"
+            src={experiment01Image}
             alt="experiment"
             className="w-full h-full object-cover"
           />
