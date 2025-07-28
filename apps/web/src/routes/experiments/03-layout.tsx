@@ -9,12 +9,12 @@ export const Route = createFileRoute("/experiments/03-layout")({
 
 function RouteComponent() {
   return (
-    <div className="h-screen w-screen *:text-primary gap-24 scheme-only-dark dark bg-background flex flex-col relative p-8">
+    <div className="h-auto md:h-screen w-screen *:text-primary gap-24 scheme-only-dark dark bg-background flex flex-col relative p-8">
       <Grid gap="none" className="gap-4">
         <div className="col-span-3 pt-2">
           <p className="">Flux Design®</p>
         </div>
-        <div className="col-span-3 flex pt-2 items-center justify-between">
+        <div className="hidden col-span-3 md:flex pt-2 items-center justify-between">
           <ul className="flex items-center w-full justify-between font-light text-primary/60">
             <li className="hover:text-primary cursor-pointer">Projects</li>
             <li className="hover:text-primary cursor-pointer text-primary">
@@ -24,12 +24,12 @@ function RouteComponent() {
             <li className="hover:text-primary cursor-pointer">Archive</li>
           </ul>
         </div>
-        <div className="col-span-6 pt-2 flex items-end justify-end font-light underline">
+        <div className="col-span-9 md:col-span-6 pt-2 flex items-end justify-end font-light underline">
           <p>Start a project</p>
         </div>
       </Grid>
       <Grid gap="none" className="gap-4 w-full h-full">
-        <div className="col-span-2 h-full">
+        <div className="col-span-12 md:col-span-2 h-full">
           <Title
             style={{ marginTop: 0 }}
             className="font-light invisible opacity-0"
@@ -49,11 +49,11 @@ function RouteComponent() {
             endure.
           </p>
         </div>
-        <div className="col-span-5 flex flex-col col-start-4 h-full">
+        <div className="col-span-12 md:col-span-5 flex flex-col md:col-start-4 h-full">
           <Title style={{ marginTop: 0 }} className="font-light" level={2}>
             [01]
           </Title>
-          <div className="w-full h-full grow bg-accent relative overflow-hidden">
+          <div className="w-full h-full grow aspect-video md:aspect-auto bg-accent relative overflow-hidden">
             <video
               src="https://dr.savee-cdn.com/things/6/8/81f2623c9caf25e4d83075.mp4"
               className="w-full h-full absolute top-0 left-0 object-cover"
@@ -63,7 +63,7 @@ function RouteComponent() {
             ></video>
           </div>
         </div>
-        <div className="col-span-3 col-start-10 h-full flex flex-col justify-between">
+        <div className="col-span-12 md:col-span-3 md:col-start-10 h-full flex flex-col justify-between">
           <div className="flex flex-col">
             <Title
               style={{ marginTop: 0 }}

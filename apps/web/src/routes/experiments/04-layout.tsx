@@ -12,7 +12,7 @@ function RouteComponent() {
   return (
     <div className="w-screen h-screen bg-accent p-3 flex flex-col gap-3">
       <Grid gap="none" className="gap-3">
-        <div className="col-span-3 aspect-square p-5 flex flex-col justify-between bg-background rounded-md">
+        <div className="col-span-12 sm:col-span-6 xl:col-span-3 aspect-video lg:aspect-square p-5 flex flex-col justify-between bg-background rounded-md">
           <p className="text-xs text-muted-foreground/80">001</p>
           <div className="flex flex-col">
             <h2 className="text-lg font-normal">Setup and customize</h2>
@@ -22,7 +22,7 @@ function RouteComponent() {
             </p>
           </div>
         </div>
-        <div className="col-span-3 aspect-square p-5 flex flex-col justify-between bg-background rounded-md">
+        <div className="col-span-12 sm:col-span-6 xl:col-span-3 aspect-video lg:aspect-square p-5 flex flex-col justify-between bg-background rounded-md">
           <p className="text-xs text-muted-foreground/80">002</p>
           <div className="flex flex-col">
             <h2 className="text-lg font-normal">Track Spending</h2>
@@ -31,7 +31,7 @@ function RouteComponent() {
             </p>
           </div>
         </div>
-        <div className="col-span-3 aspect-square p-5 flex flex-col justify-between bg-background rounded-md">
+        <div className="col-span-12 sm:col-span-6 xl:col-span-3 aspect-video lg:aspect-square p-5 flex flex-col justify-between bg-background rounded-md">
           <p className="text-xs text-muted-foreground/80">003</p>
           <div className="flex flex-col">
             <h2 className="text-lg font-normal">Optimized Budget</h2>
@@ -40,7 +40,7 @@ function RouteComponent() {
             </p>
           </div>
         </div>
-        <div className="col-span-3 aspect-square p-5 flex flex-col justify-between bg-background rounded-md">
+        <div className="col-span-12 sm:col-span-6 xl:col-span-3 aspect-video lg:aspect-square p-5 flex flex-col justify-between bg-background rounded-md">
           <p className="text-xs text-muted-foreground/80">004</p>
           <div className="flex flex-col">
             <h2 className="text-lg font-normal">Open Source</h2>
@@ -52,7 +52,7 @@ function RouteComponent() {
         </div>
       </Grid>
       <Grid className="gap-3 bg-background p-3 rounded-md" gap="none">
-        <div className="col-span-6 aspect-square relative overflow-hidden  rounded-md">
+        <div className="col-span-12 aspect-video md:col-span-6 md:aspect-square relative overflow-hidden rounded-md">
           <video
             src="https://dr.savee-cdn.com/things/6/8/803f2a3c9caf25dac911f4.mp4"
             className="absolute inset-0 w-full h-full object-cover"
@@ -61,7 +61,7 @@ function RouteComponent() {
             loop
           />
         </div>
-        <div className="col-span-6 flex flex-col justify-between">
+        <div className="col-span-12 md:col-span-6 gap-10 md:gap-0 flex flex-col justify-between">
           <header className="flex flex-col pt-2">
             <button className="rounded-full border-border/60 border w-fit text-orange-400 text-xs px-2 py-0.5">
               WOSS Perks

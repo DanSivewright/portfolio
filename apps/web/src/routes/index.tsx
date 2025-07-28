@@ -39,14 +39,12 @@ function HomeComponent() {
             Today <span>{}</span>
           </Title>
           <p>
-            I work as a fullstack developer at WinWin. I care deeply about the
-            user interface, how it looks, how it behaves and how it makes me
-            feel.
+            I work as a fullstack developer. I care deeply about the user
+            interface, how it looks, how it behaves and how it makes me feel.
             <br />
             <br />
             <p>
-              Previously, I ran a startup that built corporate solutions to
-              e-learning.{" "}
+              Previously at a startup that built corporate e-learning solutions.
             </p>
           </p>
         </Section>
