@@ -74,6 +74,29 @@ function HomeComponent() {
             to="/experiments/02-layout"
           >
             <img
+              src="/03.png"
+              alt="experiment"
+              className="w-full h-full object-cover"
+            />
+            <div className="flex pt-2.5 flex-col gap-2">
+              <Title style={{ margin: 0 }} level={3} showAs={6}>
+                Drak Mode Grid Layout
+              </Title>
+              <div className="flex items-center gap-2">
+                <a
+                  className="text-xs underline"
+                  href="https://x.com/GotinGeorgiG"
+                >
+                  @GotinGeorgiG
+                </a>
+              </div>
+            </div>
+          </Link>
+          <Link
+            className="flex w-[33vw] flex-col p-4 bg-muted/80"
+            to="/experiments/02-layout"
+          >
+            <img
               src="/02.png"
               alt="experiment"
               className="w-full h-full object-cover"
