@@ -8,6 +8,7 @@ import experiment01Image from "/01.jpeg"
 import experiment02Image from "/02.png"
 import experiment03Image from "/03.png"
 import experiment04Image from "/04.png"
+import experiment05Image from "/05.png"
 import profileImage from "/me.jpeg"
 
 export const Route = createFileRoute("/")({
@@ -55,9 +56,41 @@ function HomeComponent() {
         </Title>
       </section>
       <Section
-        className="columns-1 gap-1.5 px-1.5 md:columns-2 lg:columns-3 xl:columns-4"
+        className="columns-1 gap-1.5 px-1.5 md:columns-2 lg:columns-3"
         side="b"
       >
+        <Link
+          className="flex mb-1.5 w-full break-inside-avoid  flex-col p-4 bg-muted/80"
+          to="/experiments/05-layout"
+        >
+          <img
+            src={experiment05Image}
+            alt="experiment"
+            className="w-full h-full object-cover"
+          />
+          <div className="flex pt-2.5 flex-col gap-2">
+            <Title style={{ margin: 0 }} level={3} showAs={6}>
+              Features and CTA
+            </Title>
+            <div className="flex items-center gap-2">
+              <a
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  window.open(
+                    "https://x.com/nickbakeddesign/status/1947156058721403387/photo/3",
+                    "_blank"
+                  )
+                }}
+                className="text-xs underline"
+                target="_blank"
+                href="https://x.com/nickbakeddesign/status/1947156058721403387/photo/3"
+              >
+                @nickbakeddesign
+              </a>
+            </div>
+          </div>
+        </Link>
         <Link
           className="flex mb-1.5 w-full break-inside-avoid  flex-col p-4 bg-muted/80"
           to="/experiments/04-layout"
@@ -75,6 +108,12 @@ function HomeComponent() {
               <a
                 className="text-xs underline"
                 href="https://x.com/basit_designs"
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  window.open("https://x.com/basit_designs", "_blank")
+                }}
+                target="_blank"
               >
                 @basit_designs
               </a>
@@ -98,6 +137,12 @@ function HomeComponent() {
               <a
                 className="text-xs underline"
                 href="https://x.com/GotinGeorgiG"
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  window.open("https://x.com/GotinGeorgiG", "_blank")
+                }}
+                target="_blank"
               >
                 @GotinGeorgiG
               </a>
@@ -118,7 +163,16 @@ function HomeComponent() {
               Dashed Grid
             </Title>
             <div className="flex items-center gap-2">
-              <a className="text-xs underline" href="https://x.com/01_hh_">
+              <a
+                className="text-xs underline"
+                href="https://x.com/01_hh_"
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  window.open("https://x.com/01_hh_", "_blank")
+                }}
+                target="_blank"
+              >
                 @01_hh_
               </a>
             </div>
@@ -141,6 +195,15 @@ function HomeComponent() {
               <a
                 className="text-xs underline"
                 href="https://x.com/Marki_Tweet/status/1947246017071480915/photo/1"
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  window.open(
+                    "https://x.com/Marki_Tweet/status/1947246017071480915/photo/1",
+                    "_blank"
+                  )
+                }}
+                target="_blank"
               >
                 @Marki_Tweet
               </a>

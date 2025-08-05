@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Experiments05LayoutRouteImport } from './routes/experiments/05-layout'
 import { Route as Experiments04LayoutRouteImport } from './routes/experiments/04-layout'
 import { Route as Experiments03LayoutRouteImport } from './routes/experiments/03-layout'
 import { Route as Experiments02LayoutRouteImport } from './routes/experiments/02-layout'
@@ -30,6 +31,11 @@ const DashboardRoute = DashboardRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Experiments05LayoutRoute = Experiments05LayoutRouteImport.update({
+  id: '/experiments/05-layout',
+  path: '/experiments/05-layout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Experiments04LayoutRoute = Experiments04LayoutRouteImport.update({
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/experiments/02-layout': typeof Experiments02LayoutRoute
   '/experiments/03-layout': typeof Experiments03LayoutRoute
   '/experiments/04-layout': typeof Experiments04LayoutRoute
+  '/experiments/05-layout': typeof Experiments05LayoutRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/experiments/02-layout': typeof Experiments02LayoutRoute
   '/experiments/03-layout': typeof Experiments03LayoutRoute
   '/experiments/04-layout': typeof Experiments04LayoutRoute
+  '/experiments/05-layout': typeof Experiments05LayoutRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/experiments/02-layout': typeof Experiments02LayoutRoute
   '/experiments/03-layout': typeof Experiments03LayoutRoute
   '/experiments/04-layout': typeof Experiments04LayoutRoute
+  '/experiments/05-layout': typeof Experiments05LayoutRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/experiments/02-layout'
     | '/experiments/03-layout'
     | '/experiments/04-layout'
+    | '/experiments/05-layout'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/experiments/02-layout'
     | '/experiments/03-layout'
     | '/experiments/04-layout'
+    | '/experiments/05-layout'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/experiments/02-layout'
     | '/experiments/03-layout'
     | '/experiments/04-layout'
+    | '/experiments/05-layout'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +131,7 @@ export interface RootRouteChildren {
   Experiments02LayoutRoute: typeof Experiments02LayoutRoute
   Experiments03LayoutRoute: typeof Experiments03LayoutRoute
   Experiments04LayoutRoute: typeof Experiments04LayoutRoute
+  Experiments05LayoutRoute: typeof Experiments05LayoutRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiments/05-layout': {
+      id: '/experiments/05-layout'
+      path: '/experiments/05-layout'
+      fullPath: '/experiments/05-layout'
+      preLoaderRoute: typeof Experiments05LayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/experiments/04-layout': {
@@ -183,6 +203,7 @@ const rootRouteChildren: RootRouteChildren = {
   Experiments02LayoutRoute: Experiments02LayoutRoute,
   Experiments03LayoutRoute: Experiments03LayoutRoute,
   Experiments04LayoutRoute: Experiments04LayoutRoute,
+  Experiments05LayoutRoute: Experiments05LayoutRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
